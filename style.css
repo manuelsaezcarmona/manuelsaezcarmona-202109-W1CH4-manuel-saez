@@ -14,6 +14,10 @@ main {
   margin: 2% 10%;
   display: flex;
 }
+img {
+  max-width: 100%;
+  height: auto;
+}
 .header-container {
   background-color: #a593c2;
   display: flex;
@@ -46,9 +50,8 @@ main {
 aside {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   align-items: center;
-  margin: 5% 0%;
+  margin: 5% 2%;
 }
 aside > header {
   text-align: center;
@@ -69,8 +72,8 @@ aside > nav > ul li {
 aside > nav > ul li:last-child {
   border: none;
 }
-main > header,
-main > section {
+
+.principal-container {
   order: 1;
 }
 
@@ -91,10 +94,6 @@ main section article h3 {
   margin: 3% 0%;
 }
 
-.images-container img {
-  max-width: 100%;
-  height: auto;
-}
 footer,
 footer address {
   display: flex;
@@ -108,4 +107,23 @@ footer h2 {
 }
 
 @media screen and (min-width: 900px) {
+  .header-container > img {
+    max-width: 10%;
+  }
+  main {
+    flex-direction: row;
+  }
+  aside {
+    width: 30%;
+  }
+  .principal-container {
+    width: 70%;
+  }
+  footer,
+  footer address {
+    align-items: flex-start;
+  }
+  footer {
+    margin-left: 2%;
+  }
 }
